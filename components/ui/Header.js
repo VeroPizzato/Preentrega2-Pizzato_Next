@@ -1,20 +1,59 @@
+"use client"
 import Image from "next/image"
 import logo from "@/public/logo.png"
-import Menu from "./Menu"
+import Link from 'next/link'
+import CartWidget from './CartWidget'
+import { usePathname } from "next/navigation"
+
+const links = [
+    {
+        label: "Inicio",
+        href: "/"
+    },
+    {
+        label: "Tienda",
+        href: "/productos/all"
+    },
+    {
+        label: "Nosotros",
+        href: "/nosotros"
+    },
+    {
+        label: "Contacto",
+        href: "/contacto"
+    },
+]
 
 const Header = () => {
+
+    const pathname = usePathname()
 
     return (
         <header className="w-full bg-gray-600">
             <div className="container m-auto py-6 flex justify-between items-center">
-                <Image
-                    alt="Logo"
-                    src={logo}
-                    width={200}
-                    height={50}
-                />
+                <Link href={"/"}>
+                    <Image
+                        alt="Logo"
+                        src={logo}
+                        width={200}
+                        height={50}
+                    />
+                </Link>
 
-                <Menu /> 
+                <nav className="flex justify-between gap-2">
+                    {
+                        links.map(link => {
+                            return <Link
+                                key={link.label}
+                                href={link.href}
+                                className={`${pathname === link.href ? "font-bold" :''} text-base text-slate-100 p-3 `}
+                            >
+                                {link.label}
+                            </Link>
+                        })                        
+                    }
+                    <CartWidget />
+                </nav>
             </div>
         </header>
     )
