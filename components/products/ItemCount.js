@@ -14,7 +14,7 @@ const ItemCount = ({ item }) => {
     }
 
     return (
-        <div className="flex flex-col gap-5 mt-6">
+        <div className="font-mono text-lg flex flex-col gap-5 mt-6">
             <Counter max={item.stock} counter={quantity} setCounter={setQuantity} />
             <Boton className="w-full hover:bg-blue-600" onClick={handleAdd}>Agregar al carrito</Boton>
         </div>

@@ -2,21 +2,21 @@ import Link from "next/link"
 import Image from "next/image"
 import Boton from "../ui/Boton"
 import { mockData } from "@/data/products"
+import Eliminar from "@/public/icons/borrar.png"
+import Editar from "@/public/icons/editar.png"
 
 
 const ProductsTable = async () => {     
 
     return (
         <>
-            <Boton                
-                className="rounded bg-blue-600 p-2 text-white"
-            >
+            <Boton className="flex justify-between items-center ml-auto font-mono text-lg my-4">
                 Crear nuevo
             </Boton>
             <div className="overflow-x-auto">
 
                 <table className="w-full text-xs text-left text-gray-600">
-                    <thead className="text-xs text-gray-700 uppercase">
+                    <thead className="text-sm text-gray-700 uppercase font-mono text-bold">
                         <tr>
                             <th scope="col" className="px-3 py-2">Nombre</th>
                             <th scope="col" className="px-3 py-2">Precio</th>
@@ -32,10 +32,10 @@ const ProductsTable = async () => {
                         {
                             mockData.map((item) => (
                                 <tr>
-                                    <td className="p-2">{item.title}</td>
-                                    <td className="p-2">{item.price}</td>
-                                    <td className="p-2">{item.stock}</td>
-                                    <td className="p-2">{item.type}</td>
+                                    <td className="font-mono p-2">{item.title}</td>
+                                    <td className="font-mono p-2">{item.price}</td>
+                                    <td className="font-mono p-2">{item.stock}</td>
+                                    <td className="font-mono p-2">{item.type}</td>
                                     <td className="p-2">
                                         <Image
                                             src={`/imgs/${item.image}`}
@@ -44,20 +44,23 @@ const ProductsTable = async () => {
                                             height={80}
                                         />
                                     </td>
-                                    <td className="p-2">{item.id}</td>
-                                    <td className="p-2 truncate max-w-prose">{item.description}</td>
+                                    <td className="font-mono p-2">{item.slug}</td>
+                                    <td className="font-mono p-2 truncate max-w-prose">{item.description}</td>
                                     <td className="p-2">
-                                        <Boton                                            
-                                            className="rounded bg-green-400 p-2 text-white"
-                                        >
-                                            Editar
-                                        </Boton>
-
-                                        <Boton                                            
-                                            className="rounded bg-red-400 p-2 text-white"
-                                        >
-                                            Eliminar
-                                        </Boton>
+                                        <div className="flex justify-center items-center gap-2">
+                                            <Image 
+                                                src={Editar}
+                                                alt="Icono editar"
+                                                width={30}
+                                                height={30}
+                                            />
+                                            <Image 
+                                                src={Eliminar}
+                                                alt="Icono eliminar"
+                                                width={30}
+                                                height={30}
+                                            />
+                                        </div>                                        
                                     </td>
                                 </tr>
                             ))

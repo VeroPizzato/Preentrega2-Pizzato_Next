@@ -1,13 +1,13 @@
 import ProductDetail from "@/components/products/ProductDetail"
 
-const Detail = ({params}) => {
-    const {id} = params
+const DetailPage = ({params}) => {
+    const {slug} = params
 
     return (
         <main className="container m-auto mt-10">
-            <ProductDetail id={id}/>
+            <ProductDetail slug={slug}/>
         </main>
     )
 }
 
-export default Detail
+export default DetailPage

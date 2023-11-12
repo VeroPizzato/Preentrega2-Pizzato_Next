@@ -12,7 +12,7 @@ const CartWidget = () => {
                 width={30}
                 height={30}
             />
-            <span>0</span>
+            <span>3</span>
         </Link>
     )
 }

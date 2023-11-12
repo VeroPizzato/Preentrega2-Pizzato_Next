@@ -8,13 +8,13 @@ export default function Nosotros() {
     return (
         <>
             <main className="container m-auto">
-                <h1 className="text-4xl text-blue-600 my-4">Nosotros</h1>
+                <h1 className="text-4xl text-blue-600 text-center my-4 font-mono">Nosotros</h1>
                 <hr />
-                <p className="text-base mt-4">SITIO EN CONSTRUCCIÓN</p>
+                <p className="text-base mt-4 font-mono">SITIO EN CONSTRUCCIÓN</p>
 
-                <Boton onClick={() => router.back()}>
-                    Volver
-                </Boton>
+                <div class="font-mono text-lg my-4">
+                    <Boton onClick={() => router.back()}> Volver </Boton>
+                </div>
             </main>
         </>
     )

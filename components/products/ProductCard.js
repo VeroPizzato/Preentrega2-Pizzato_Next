@@ -5,7 +5,7 @@ const ProductCard = ({ item }) => {
 
     return (
         <article className="basis-72 shadow-lg rounded">
-            <Link href={`/productos/detail/${item.id}`}
+            <Link href={`/productos/detail/${item.slug}`}
                 className="flex flex-col"
             >
                 <Image
@@ -17,8 +17,8 @@ const ProductCard = ({ item }) => {
                 />
 
                 <div className="px-4 border-t border-gray-200">
-                    <h4 className="text-sm my-4">{item.title}</h4>
-                    <p className="text-2xl font-semibold mb-6">$ {item.price}</p>
+                    <h4 className="font-mono text-sm my-4">{item.title}</h4>
+                    <p className="font-mono text-2xl font-semibold mb-6">$ {item.price}</p>
                 </div>
             </Link>
         </article>
