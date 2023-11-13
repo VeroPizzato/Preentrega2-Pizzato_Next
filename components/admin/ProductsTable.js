@@ -30,7 +30,7 @@ const ProductsTable = async () => {
                         {
                             mockData.map((item) => (
                                 <tr>
-                                    <td className="font-mono p-2">{item.title}</td>
+                                    <td className="font-mono p-2 text-justify">{item.title}</td>
                                     <td className="font-mono p-2">{item.price}</td>
                                     <td className="font-mono p-2">{item.stock}</td>
                                     <td className="font-mono p-2">{item.type}</td>
@@ -42,8 +42,8 @@ const ProductsTable = async () => {
                                             height={80}
                                         />
                                     </td>
-                                    <td className="font-mono p-2">{item.slug}</td>
-                                    <td className="font-mono p-2 truncate max-w-prose">{item.description}</td>
+                                    <td className="font-mono p-2 text-justify">{item.slug}</td>
+                                    <td className="font-mono p-2 text-justify">{item.description}</td>
                                     <td className="p-2">
                                         <div className="flex justify-center items-center gap-2">
                                             <Image 

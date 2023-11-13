@@ -1,11 +1,12 @@
-import LoginForm from "@/components/auth/LoginForm"
+import ProductsTable  from "@/components/admin/ProductsTable"
 
 const Admin = () => {
 
     return (
-        <div>
-            <LoginForm />
-        </div>              
+        <div className="container m-auto mt-6">      
+            <h2 className="text-2xl my-10 border-b pb-4 font-mono">Panel de Administración</h2>
+            <ProductsTable />
+        </div>                   
     )
 }
 

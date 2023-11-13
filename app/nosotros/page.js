@@ -2,6 +2,11 @@
 import Boton from "@/components/ui/Boton"
 import { useRouter } from "next/navigation"
 
+// export const metadata = {
+//     title: 'Nosotros - Spirit Computacion',
+//     description: 'Cómo comienza Spirit Computacion',
+// }
+
 export default function Nosotros() {
     const router = useRouter()
 

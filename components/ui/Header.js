@@ -4,7 +4,6 @@ import logo from "@/public/logo.png"
 import Link from 'next/link'
 import CartWidget from './CartWidget'
 import { usePathname } from "next/navigation"
-import LogoutButton from "@/components/admin/LogoutButton"
 
 const links = [
     {
@@ -27,10 +26,8 @@ const links = [
 
 const Header = () => {
 
-    const pathname = usePathname()
-  
-    const visible = false;   
-
+    const pathname = usePathname() 
+     
     return (
         <header className="w-full bg-gray-600">
             <div className="container m-auto py-6 flex justify-between items-center">
@@ -43,7 +40,7 @@ const Header = () => {
                     />
                 </Link>
 
-                <nav className="flex justify-between gap-2">
+                <nav className="flex justify-between gap-2 bg-red">
                     {
                         links.map(link => {
                             return <Link
@@ -55,9 +52,8 @@ const Header = () => {
                             </Link>
                         })                        
                     }
-                    <CartWidget />
+                    <CartWidget />                    
                     
-                    <LogoutButton visible={visible} />
                 </nav>
             </div>
         </header>
