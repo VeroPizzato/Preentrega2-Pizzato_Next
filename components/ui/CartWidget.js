@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const CartWidget = () => {    
     return (
-        <Link href={"/cart"} className={`text-base text-slate-100 p-3 flex items-center`}>
+        <Link href={"/cart"} className={`text-base p-3 flex items-center font-bold text-red-900`}>
             <Image 
                 src={Carrito}
                 alt="Icono carrito"

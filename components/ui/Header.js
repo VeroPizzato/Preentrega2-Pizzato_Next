@@ -29,7 +29,7 @@ const Header = () => {
     const pathname = usePathname() 
      
     return (
-        <header className="w-full bg-gray-600">
+        <header className="w-full bg-gray-400">
             <div className="container m-auto py-6 flex justify-between items-center">
                 <Link href={"/"}>
                     <Image
@@ -46,7 +46,7 @@ const Header = () => {
                             return <Link
                                 key={link.label}
                                 href={link.href}
-                                className={`${pathname === link.href ? "font-extrabold" :''} font-mono text-lg text-slate-100 p-3 `}
+                                className={`${pathname === link.href ? "font-extrabold text-red-900" :''} font-mono text-lg p-3 `}
                             >
                                 {link.label}
                             </Link>

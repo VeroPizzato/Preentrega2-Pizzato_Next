@@ -14,7 +14,7 @@ const Productos = ({params}) => {
     return (
         <main className="container m-auto">
             <div>
-                <h2 className="text-4xl text-blue-600 text-center my-4 font-mono">Productos</h2>
+                <h2 className="text-4xl text-red-900 text-center my-4 font-mono">Productos</h2>
                 <p className="text-2xl text-bold text-center border-b pb-8 font-mono">
                     Trabajamos las mejores marcas y los modelos de última generación en los siguientes productos
                 </p>

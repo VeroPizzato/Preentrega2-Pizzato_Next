@@ -6,7 +6,7 @@ const Cart = () => {
 
     return (
         <main className="container m-auto">
-            <h1 className="text-4xl text-center my-10 font-mono border-b pb-4">Tu compra</h1>
+            <h1 className="text-4xl text-red-900 text-center my-10 font-mono border-b pb-4">Tu compra</h1>
             
             <table className="min-w-full bg-white border border-gray-300">                                     
                 <tbody>

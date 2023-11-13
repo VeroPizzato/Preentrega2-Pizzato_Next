@@ -9,9 +9,9 @@ export default function Contacto() {
     return (
         <>
             <main className="container m-auto max-w-md">
-                <h1 className="text-4xl text-blue-600 my-4 text-center font-mono">Contacto</h1>
+                <h1 className="text-4xl text-red-900 my-4 text-center font-mono">Contacto</h1>
                 <hr/>                 
-                <form class="bg-white px-8 pt-6 pb-8 mb-4 rounded-xl">
+                <form class="bg-gray-100 px-8 pt-6 pb-8 mb-4 rounded-xl shadow-lg">
                     <div class="mb-4">
                         <label class="block text-gray-700 text-lg font-bold mb-2 font-mono" for="mensaje"> Mensaje </label>
                         <textarea class="w-full shadow border border-blue-100 rounded py-2 px-3 text-gray-700 font-mono" rows="5" type="text" placeholder="Dejanos un mensaje" required></textarea>

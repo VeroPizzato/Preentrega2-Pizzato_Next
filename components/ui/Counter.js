@@ -8,9 +8,9 @@ const Counter = ({counter, setCounter, max}) => {
 
     return (
         <div className="flex items-center gap-3">
-            <Boton onClick={decrease} className="active:bg-blue-600">-</Boton>
-            <p>{counter}</p>
-            <Boton onClick={increase} className="active:bg-blue-600">+</Boton>
+            <Boton onClick={decrease}>-</Boton>
+            <p className="font-bold">{counter}</p>
+            <Boton onClick={increase}>+</Boton>
         </div>
     )
 }
