@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Image from "next/image"
 import Boton from "../ui/Boton"
 import { mockData } from "@/data/products"
@@ -14,7 +13,6 @@ const ProductsTable = async () => {
                 Crear nuevo
             </Boton>
             <div className="overflow-x-auto">
-
                 <table className="w-full text-xs text-left text-gray-600">
                     <thead className="text-sm text-gray-700 uppercase font-mono text-bold">
                         <tr>
