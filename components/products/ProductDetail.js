@@ -8,7 +8,7 @@ const ProductDetail = ({ slug }) => {
   
     return (
         <div className="max-w-4xl m-auto">
-            <IrAtras className="font-mono text-lg text-red-900 hover:font-bold underline mb-6"/>
+            <IrAtras className="font-mono text-lg text-red-900 hover:font-boldgit inline-table mb-6">Volver</IrAtras>
             <section className="flex gap-6">
                 <div className="relative basis-1/2">
                     <Image
