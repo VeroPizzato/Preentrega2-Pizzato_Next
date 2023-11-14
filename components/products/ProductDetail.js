@@ -28,7 +28,7 @@ const ProductDetail = ({ slug }) => {
             </section>
             <section className="mt-12">
                 <h3 className="font-mono text-xl font-semibold border-b border-red-900 pb-4 my-4 ">Descripcion</h3>
-                <p className="font-mono text-gray-600 text-justify">{item.description}</p>
+                <p className="font-mono text-gray-600 text-justify mb-6">{item.description}</p>
             </section>
         </div>
     )
