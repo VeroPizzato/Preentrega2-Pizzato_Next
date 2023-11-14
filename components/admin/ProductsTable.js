@@ -13,7 +13,7 @@ const ProductsTable = async () => {
                 Crear nuevo
             </Boton>
             <div className="overflow-x-auto">
-                <table className="w-full text-xs text-left text-gray-600">
+                <table className="w-full text-xs text-left text-gray-600 mb-6">
                     <thead className="text-sm text-gray-700 uppercase font-mono text-bold">
                         <tr>
                             <th scope="col" className="px-3 py-2">Nombre</th>
