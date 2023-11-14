@@ -1,21 +1,17 @@
 
-"use client"
-import Boton from "@/components/ui/Boton"
-import { useRouter } from "next/navigation"
+import IrAtras from "@/components/ui/IrAtras"
 
-export default function NotFound() {
-    const router = useRouter()
-
+export default function NotFound() {   
     return (
         <>
             <main className="container m-auto">
-                <h1 className="text-4xl text-red-900 my-4">Página no encontrada - Error 404</h1>
-                <hr />
-                <p className="text-base mt-4">La ruta a la que intenta acceder no existe</p>
+                <h1 className="text-4xl text-red-900 my-4 font-mono ">Página no encontrada - Error 404</h1>
+                <hr className="border-b border-red-900" />
+                <p className="text-2xl mt-4 font-mono pb-4">La ruta a la que intenta acceder no existe</p>
 
-                <Boton onClick={() => router.back()}>
+                <IrAtras>
                     Volver
-                </Boton>
+                </IrAtras>
             </main>
         </>
     )
