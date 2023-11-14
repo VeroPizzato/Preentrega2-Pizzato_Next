@@ -2,10 +2,14 @@ import { mockData } from "@/data/products"
 import Image from "next/image"
 import ItemCount from "./ItemCount"
 import IrAtras from "../ui/IrAtras"
+import NotFound from "@/app/not-found"
 
 const ProductDetail = ({ slug }) => {
     const item = mockData.find(p => p.slug === slug)      
-  
+    if (!item)
+        return (
+            <NotFound/>
+    )
     return (
         <div className="max-w-4xl m-auto">
             <IrAtras className="font-mono text-lg text-red-900 hover:font-boldgit inline-table mb-6">Volver</IrAtras>

@@ -1,3 +1,4 @@
+import NotFound from "@/app/not-found"
 import CategoriesMenu from "@/components/products/CategoriesMenu"
 import ProductsList from "@/components/products/ProductsList"
 
@@ -10,6 +11,21 @@ export async function generateMetadata({params, searchParams}, parent) {
 
 const Productos = ({params}) => {
     const { categoria } = params
+
+    const rutasCategorias = [
+        "all",
+        "monitor",
+        "gabinete",
+        "notebook",
+        "componente"
+    ] 
+
+    const extisteCategoria = rutasCategorias.some((cat) => cat === categoria)
+   
+    if (!extisteCategoria)
+        return (
+            <NotFound/>
+    )
 
     return (
         <main className="container m-auto">

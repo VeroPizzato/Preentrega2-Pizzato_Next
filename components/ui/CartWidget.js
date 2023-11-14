@@ -13,7 +13,7 @@ const CartWidget = () => {
                 height={30}
             />
             <span className="text-base text-red-900 font-bold">3</span>
-        </Link>
+        </Link>        
     )
 }
 
