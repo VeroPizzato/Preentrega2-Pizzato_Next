@@ -46,7 +46,7 @@ const Header = () => {
                             return <Link
                                 key={link.label}
                                 href={link.href}
-                                className={`${pathname === link.href ? "font-extrabold text-red-900" :''} font-mono text-lg p-3 `}
+                                className={`${pathname === link.href ? "font-extrabold text-red-900" :''} font-mono text-xl p-3 `}
                             >
                                 {link.label}
                             </Link>
