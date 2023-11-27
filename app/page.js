@@ -1,14 +1,7 @@
 export const metadata = {
   title: 'Spirit Computacion',
   description: 'App de tienda de computacion, descuentos y ofertas imperdibles en artículos de Computación. Comprá y Pagá en cuotas con todas las tarjetas. Envíos a todo el país. Asesoramiento Online.',
-  keywords: ['Spirit Computacion', 'Monitores', 'Notebooks', 'Gabinetes', 'Componentes'],
-  openGraph: {
-    title: 'Spirit Computacion',
-    description: 'La mejor tienda de computacion',
-    type: 'article',
-    publishedTime: '2023-11-13T00:00:00.000Z',
-    authors: ['Verizzato'],
-  },
+  keywords: ['Spirit Computacion', 'Monitores', 'Notebooks', 'Gabinetes', 'Componentes'], 
 }
 
 export default function Home() {
