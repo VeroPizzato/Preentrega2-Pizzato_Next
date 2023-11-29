@@ -4,7 +4,7 @@ const ProductsList = async ({ categoria }) => {
 
     const items = await fetch(`http://localhost:3000/api/productos/${categoria}`, 
     {cache: "no-store"}
-    ).then(r => r.json()) 
+    ).then(res => res.json())     
  
     return (
         <section className="container m-auto flex justify-center items-center gap-12 flex-wrap mb-6">

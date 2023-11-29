@@ -1,14 +1,16 @@
-import { mockData } from "@/data/products"
 import Image from "next/image"
 import ItemCount from "./ItemCount"
 import IrAtras from "../ui/IrAtras"
 import NotFound from "@/app/not-found"
 
-const ProductDetail = ({ slug }) => {
-    const item = mockData.find(p => p.slug === slug)      
+const ProductDetail = async ({ slug }) => {
+    const item = await fetch(`http://localhost:3000/api/producto/${slug}`, 
+    {cache: "no-store"}
+    ).then(res => res.json())  
+   
     if (!item)
-        return (
-            <NotFound/>
+         return (
+             <NotFound/>
     )
     return (
         <div className="max-w-4xl m-auto">
