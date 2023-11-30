@@ -10,6 +10,16 @@ export async function generateMetadata({params, searchParams}, parent) {
     }
 }
 
+export async function generateStaticParams(){
+    return [
+        { categoria: "all"},
+        { categoria: "monitor"},
+        { categoria: "gabinete"},
+        { categoria: "notebook"},
+        { categoria: "componente"},     
+    ] 
+}
+
 const Productos = ({params}) => {
     const { categoria } = params
 
