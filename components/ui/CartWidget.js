@@ -2,8 +2,11 @@
 import Link from "next/link"
 import Carrito from "@/public/icons/carrito.png"
 import Image from "next/image"
+import { useCartContext } from "@/context/CartContext"
 
 const CartWidget = () => {    
+
+    const { totalCart } = useCartContext()
     return (
         <Link href={"/cart"} className="flex ">
             <Image 
@@ -12,7 +15,7 @@ const CartWidget = () => {
                 width={50}
                 height={30}
             />
-            <span className="text-base text-red-900 font-bold">3</span>
+            <span className="text-base text-red-900 font-bold">{totalCart()}</span>
         </Link>        
     )
 }

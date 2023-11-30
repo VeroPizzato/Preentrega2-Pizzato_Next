@@ -1,9 +1,12 @@
 "use client"
 import { useState } from "react"
+import { useCartContext } from "../../context/CartContext"
 import Counter from "../ui/Counter"
 import Boton from "../ui/Boton"
 
 const ItemCount = ({ item }) => {
+    const {addToCart} = useCartContext()
+
     const [quantity, setQuantity] = useState(1)
 
     const handleAdd = () => {

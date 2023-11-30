@@ -1,14 +1,17 @@
 import Boton from "@/components/ui/Boton"
+import { useCartContext } from "@/context/CartContext"
 import Papelera from "@/public/icons/borrar.png"
 import Image from "next/image"
+import { CartItem } from "@/components/cart/CartItem"
 
 const Cart = () => {
 
+    const { cart } = useCartContext()
     return (
         <main className="container m-auto">
             <h1 className="text-4xl text-red-900 text-center my-10 font-mono border-b pb-4">Tu compra</h1>
             
-            <table className="min-w-full bg-gray-100 border border-gray-300">                                     
+            {/* <table className="min-w-full bg-gray-100 border border-gray-300">                                     
                 <tbody>
                     <tr>
                         <td className="align-middle text-end" colSpan={5}><Boton className="font-mono text-lg my-2 px-4 border-b mr-4">Vaciar Carrito</Boton></td>
@@ -62,9 +65,14 @@ const Cart = () => {
                         <td className="align-middle text-end" colSpan={5} ><Boton className="font-mono text-lg my-2 mr-4">Finalizar Compra</Boton></td>       
                     </tr> 
                 </tbody>
-            </table>                
-              
+            </table>                   */}
+            <ul>
+               {
+                   cart.map((item) => <CartItem item={item} key={slug}/>)
+               }
+            </ul>
         
+           
         </main>
     )
 }
