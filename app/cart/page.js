@@ -1,11 +1,11 @@
-import { CartContext } from "@/context/CartContext"
+import { useCartContext } from "@/context/CartContext"
 import { useContext, useState } from "react"
 import Papelera from "@/public/icons/borrar.png"
 import Boton from "../ui/Boton"
 
 const Cart = () => {
 
-    const { cart, clear, removeItem, totalItems, totalMonto } = useContext(CartContext);
+    const { cart, clear, removeItem, totalItems, totalMonto } = useCartContext;
     if (totalItems() === 0) {
         return (
             <div className="container mx-auto my-5">

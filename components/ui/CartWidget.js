@@ -2,12 +2,11 @@
 import Link from "next/link"
 import Carrito from "@/public/icons/carrito.png"
 import Image from "next/image"
-import { CartContext } from "@/context/CartContext"
-import { useContext, useState } from "react"
+import { useCartContext } from "@/context/CartContext"
 
 const CartWidget = () => {    
 
-    const { totalItems } = useContext(CartContext);
+    const { totalItems } = useCartContext();
     return (
         <Link href={"/cart"} className="flex ">
             <Image 

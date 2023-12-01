@@ -3,6 +3,8 @@ import { createContext, useContext, useState } from "react"
 
 export const CartContext = createContext()
 
+export const useCartContext = () => useContext(CartContext)
+
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
@@ -15,6 +17,14 @@ export const CartProvider = ({children}) => {
             setCart([...cart]);        
         }        
     }    
+
+    const getItem = (itemId) => {
+        if (isInCart(itemId)){
+            let pos = cart.findIndex(prod => prod.id === itemId);
+            return cart[pos]
+        }
+        else return null;
+    }
      
     const removeItem = (itemSlug) => {
         const items = cart.filter(prod => prod.slug !== itemSlug)
@@ -38,7 +48,7 @@ export const CartProvider = ({children}) => {
     }
 
     return(
-        <CartContext.Provider value={{cart, addItem, removeItem, clear, totalItems, totalMonto, isInCart}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, totalItems, totalMonto, isInCart, getItem}}>
             {children}
         </CartContext.Provider>
     )
