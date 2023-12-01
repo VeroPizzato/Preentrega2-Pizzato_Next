@@ -18,9 +18,9 @@ export const CartProvider = ({children}) => {
         }        
     }    
 
-    const getItem = (itemId) => {
-        if (isInCart(itemId)){
-            let pos = cart.findIndex(prod => prod.id === itemId);
+    const getItem = (itemSlug) => {
+        if (isInCart(itemSlug)){
+            let pos = cart.findIndex(prod => prod.slug === itemSlug);
             return cart[pos]
         }
         else return null;
