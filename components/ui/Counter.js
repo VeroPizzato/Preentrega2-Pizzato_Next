@@ -8,7 +8,7 @@ const Counter = ({producto}) => {
 
     const { addItem, getItem } = useCartContext();
 
-    const [cantidad, setCantidad] = useState(0);
+    const [cantidad, setCantidad] = useState(1);
     const [stockDisponible, setStockDisponible]  = useState(producto.stock);
     const [textoBoton, setTextoBoton] = useState('Agregar al carrito');
   
@@ -31,7 +31,7 @@ const Counter = ({producto}) => {
      }, []);    
 
     const increase = () => cantidad < stockDisponible && setCantidad(cantidad + 1)
-    const decrease = () => cantidad > 0 && setCantidad(cantidad - 1)
+    const decrease = () => cantidad > 1 && setCantidad(cantidad - 1)
     
     if (stockDisponible===0) return <h1 className="font-mono text-xl font-bold text-center mt-6">No hay stock</h1>
     return (        
