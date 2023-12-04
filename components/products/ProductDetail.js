@@ -26,7 +26,7 @@ const ProductDetail = async ({ slug }) => {
                     />
                 </div>
                 <div className="basis-1/2">
-                    <h2 className="font-mono text-2xl font-semibold border-b border-red-900 pb-4 mb-4 text-justify">{item.title}</h2>
+                    <h2 className="font-mono text-2xl font-semibold border-b border-red-900 pb-4 mb-4 text-justify">{item.title}</h2>                 
                     <p className="font-mono text-4xl text-center">$ {item.price}</p>
                     <Counter producto={item} />               
                 </div>

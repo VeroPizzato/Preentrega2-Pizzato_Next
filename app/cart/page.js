@@ -13,7 +13,7 @@ const Cart = () => {
             <div className="container mx-auto my-5">
                 <div className="flex flex-wrap ">
                     <div className="relative flex-grow max-w-full flex-1 px-4 text-center">
-                        <h1 className="font-mono text-xl font-bold">No hay productos en el carrito</h1>                           
+                        <h1 className="font-mono text-xl">No hay productos en el carrito</h1>                           
                         <Link href={"/"}>
                             <Boton className="flex justify-between items-center ml-auto font-mono text-lg my-4">
                                 Volver a Home
