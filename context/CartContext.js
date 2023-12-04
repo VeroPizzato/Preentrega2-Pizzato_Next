@@ -44,7 +44,7 @@ export const CartProvider = ({children}) => {
     }
 
     const totalMonto = () => {                  
-        return cart.reduce((acum, item) => acum += item.quantity * item.precio, 0);        
+        return cart.reduce((acum, item) => acum += item.quantity * item.price, 0);        
     }
 
     return(

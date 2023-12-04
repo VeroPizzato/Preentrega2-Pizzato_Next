@@ -61,7 +61,7 @@ const Cart = () => {
                                 <td colSpan={5} className="align-middle text-end"><h4>Total de la compra: $ {totalMonto().toLocaleString()}</h4></td>  
                             </tr>
                             <tr>
-                                <td className="align-middle text-end" colSpan={5}><Boton> Finalizar Compra </Boton></td>       
+                                <td className="align-middle text-end mt-32" colSpan={5}><Boton className="mt-6"> Finalizar Compra </Boton></td>       
                             </tr> 
                         </tbody>
                     </table>                
