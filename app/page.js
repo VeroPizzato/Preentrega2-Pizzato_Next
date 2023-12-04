@@ -13,7 +13,7 @@ export default function Home() {
             <p className="text-4xl text-center my-4 font-mono text-shadow-lg mt-6">
                 Encontra en nuestra tienda online toda la tecnología que buscas
             </p>
-            <p className="text-2xl font-bold text-center mt-6 font-mono text-shadow-lg">
+            <p className="2xl font-bold text-center mt-6 font-mono text-shadow-lg">
                 Los mejores productos al mejor precio y a un solo click de tu casa
             </p>
         </main>      
